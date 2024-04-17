@@ -1,10 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss' ]
 })
 export class AppComponent {
   title = 'PersonalPortfolio';
+  public isLightTheme = true;
+  inputValues: string[] = [];
+  onThemeSwitchChange() {
+    this.isLightTheme = !this.isLightTheme;
+
+    document.body.setAttribute(
+      'data-theme',
+      this.isLightTheme ? 'light' : 'dark'
+    );
+  }
+
+  setValue(value: string) {
+    this.inputValues.push(value);
+  }
+
+
 }

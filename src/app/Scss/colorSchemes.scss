@@ -1,0 +1,47 @@
+[data-theme="light"] {
+  --Background: #C8E6F8;
+  --DivBackground: #ffffff;
+  --Text: #000000;
+  --MainDefault: #9717FF;
+  --MainHover: #7D00E2;
+  --MainFocus: #7100CC;
+  --SecondaryDefault: #3B6890;
+  --SecondaryHover: #008BBF;
+  --SecondaryFocus: #2B5880;
+  --TertiaryDefault: #008BBF;
+  --TertiaryHover: #008FC5;
+  --TertiaryFocus: #0078A5;
+  --SucsessDefault: #01B56E;
+  --SucsessHover: #00AA67;
+  --SucessFocus: #008F56;
+  --WarningDefault: #E4D101;
+  --WarningHover: #DDCA00;
+  --WarningFocus: #D3C200;
+  --ErrorDefault: #F52700;
+  --ErrorHover: #F52700;
+  --ErrorFocus: #F52700;
+}
+
+[data-theme="dark"] {
+  --Background: #121212;
+  --DivBackground: #2A2A2A;
+  --Text: #FFFFFF;
+  --MainDefault: #9717FF;
+  --MainHover: #7D00E2;
+  --MainFocus: #7100CC;
+  --SecondaryDefault: #3B6890;
+  --SecondaryHover: #008BBF;
+  --SecondaryFocus: #2B5880;
+  --TertiaryDefault: #008BBF;
+  --TertiaryHover: #008FC5;
+  --TertiaryFocus: #0078A5;
+  --SuccessDefault: #01B56E;
+  --SuccessHover: #00AA67;
+  --SuccessFocus: #008F56;
+  --WarningDefault: #E4D101;
+  --WarningHover: #DDCA00;
+  --WarningFocus: #D3C200;
+  --ErrorDefault: #F52700;
+  --ErrorHover: #F52700;
+  --ErrorFocus: #F52700;
+}

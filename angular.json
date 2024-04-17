@@ -37,7 +37,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/app/Scss/styles.scss",
+              "src/app/Scss/colorSchemes.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -102,7 +103,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/app/Scss/styles.scss",
+              "src/app/Scss/colorSchemes.scss"
             ],
             "scripts": []
           }
