@@ -14,18 +14,7 @@ app-login-page{
   height: 100%;
 }
 
-input{
-  display: flex;
-  height: 60px;
-  min-width: 200px;
-  max-width: 350px;
-  background-color: transparent;
-  border-radius: 15px;
-  border: 3px solid var(--MainDefault);
-  flex-grow: 1;
-  padding-left: 15px;
-  outline: none;
-}
+
 
 button{
   height: 40px;
@@ -34,4 +23,15 @@ button{
   border-radius: 15px;
   color: var(--DivBackground);
   border: none;
+}
+
+app-input-field{
+  display: inline-flex;
+  height: 60px;
+  width: auto;
+  flex: 0 0 auto;
+  max-width: 400px;
+  justify-content: flex-start;
+  align-items: center;
+  background: none;
 }
