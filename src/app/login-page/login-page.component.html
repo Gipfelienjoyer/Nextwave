@@ -1,4 +1,17 @@
-<div style="width: 1000px; height: 400px; background-color: var(--DivBackground); margin-top: 100px; padding: 100px">
-  <app-input-field password=true style="width: 400px">Test</app-input-field>
+<div class="loginPageMainDiv">
+  <div class="loginPageLoginDiv">
+    <div class="loginPageLoginTitle">
+      {{ logIn ? 'Sign in' : 'Sign up' }}
+    </div>
+    <div class="loginPageLoginSwitch">
+      <div class="loginPageLoginSwitchOptions">
+        <p style="color: var(--MainDefault)">Sign in</p>
+        <p style="color: var(--MainDefault)">Sign up</p>
+      </div>
+      <div class="loginPageLoginSwitchBarDiv">
+        <div class="loginPageLoginSwitchBar"></div>
+      </div>
+    </div>
+  </div>
 </div>
 

@@ -1,4 +1,4 @@
-import {booleanAttribute, Component, EventEmitter, Input, Output} from '@angular/core';
+import {booleanAttribute, Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {url} from "node:inspector";
 
 @Component({
@@ -6,12 +6,18 @@ import {url} from "node:inspector";
   templateUrl: './input-field.component.html',
   styleUrl: './input-field.component.scss'
 })
-export class InputFieldComponent {
-  @Input() PlaceholderText: string = "";
+export class InputFieldComponent implements OnInit{
   @Input({transform: booleanAttribute}) password: boolean = false;
   @Output() inputValue: EventEmitter<string> = new EventEmitter<string>();
   value: string = "";
   pwVisible: boolean = false;
   valid: boolean = false;
-  svgColor: string = 'var(--MainDefault)';
+  ngOnInit() {
+    console.log(this.password)
+    if (!this.password){
+      this.pwVisible = true;
+      console.log(this.pwVisible)
+    }
+  }
 }
+

@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './login-page.component.scss'
 })
 export class LoginPageComponent {
-
+  logIn: boolean = true;
 }

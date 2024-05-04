@@ -1,0 +1,16 @@
+.test1 {
+  width: 200px; /* Set a fixed width for .test1 */
+  height: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  background: red;
+  padding: 10px;
+}
+
+.test2 {
+  height: 40px;
+  background: black;
+  margin: 5px;
+ min-width: 100px;
+}

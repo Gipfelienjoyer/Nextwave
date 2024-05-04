@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 html,
 body{
   height: 100%;
   width: 100%;
   background-color: var(--Background);
+  font-family: 'inter', sans-serif;
+  font-size: max(18px, 2vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 div{
@@ -14,8 +21,6 @@ app-login-page{
   height: 100%;
 }
 
-
-
 button{
   height: 40px;
   background-color: var(--MainDefault);
@@ -25,13 +30,10 @@ button{
   border: none;
 }
 
-app-input-field{
-  display: inline-flex;
-  height: 60px;
-  width: auto;
-  flex: 0 0 auto;
-  max-width: 400px;
-  justify-content: flex-start;
-  align-items: center;
-  background: none;
+p{
+  font-size: 18px;
+  color: var(--Text);
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
 }

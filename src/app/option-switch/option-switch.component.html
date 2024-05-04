@@ -1,0 +1,22 @@
+<div class="optionSwitchMainDiv">
+  <div class="optionSwitchOptions" #Options id="Options">
+    <div *ngFor="let item of optionsArray; let i = index"
+         [class.optionSwitchSelected]="selected === i"
+         (click)="barAutoPosition(i)"
+         (mouseenter)="mouseEnter(i)"
+         (mouseleave)="barHigh = false"
+         class="optionSwitchOption"
+         [style.font-size.px]="fontSize"
+         [style.color]="fontColor">
+      <p [style.color]="fontColor">
+        {{ item }}
+      </p>
+    </div>
+  </div>
+  <div class="optionSwitchBar"
+       [style.width.px]="width"
+       [style.left.px]="offset"
+       [style.background-color]="lineColor"
+       [style.height.px]="barHigh ? 4 : 3">
+  </div>
+</div>

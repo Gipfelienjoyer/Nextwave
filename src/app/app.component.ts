@@ -1,4 +1,5 @@
 import { Component, HostBinding } from '@angular/core';
+import {TranslocoService} from "@ngneat/transloco";
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,6 @@ import { Component, HostBinding } from '@angular/core';
 export class AppComponent {
   title = 'PersonalPortfolio';
   public isLightTheme = true;
-  inputValues: string[] = [];
   onThemeSwitchChange() {
     this.isLightTheme = !this.isLightTheme;
 
@@ -17,10 +17,35 @@ export class AppComponent {
       this.isLightTheme ? 'light' : 'dark'
     );
   }
+  testArray: string[] = ['Test', 'ddd', 'dkjalsdjflj']
 
-  setValue(value: string) {
-    this.inputValues.push(value);
+  constructor(private translocoService: TranslocoService) {}
+  public languagesList:
+    Array<Record<'imgUrl' | 'code' | 'name' | 'shorthand', string>> = [
+    {
+      imgUrl: '/assets/images/English.png',
+      code: 'en',
+      name: 'English',
+      shorthand: 'ENG',
+    },
+    {
+      imgUrl: '/assets/images/Deutsch.png',
+      code: 'de',
+      name: 'German',
+      shorthand: 'GER',
+    },
+    {
+      imgUrl: '/assets/images/Persian.png',
+      code: 'fa',
+      name: 'Persian',
+      shorthand: 'PER',
+    },
+  ];
+  public changeLanguage(languageCode: string): void {
+    this.translocoService.setActiveLang(languageCode);
+    languageCode === 'fa'
+      ? (document.body.style.direction = 'rtl')
+      : (document.body.style.direction = 'ltr');
   }
-
 
 }
