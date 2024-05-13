@@ -1,6 +1,11 @@
-<app-option-switch style="max-width: 400px; width: 400px;  display: flex"></app-option-switch>
-
-
-<h1 *transloco="let t; ">{{ t("Title") }}</h1>
-
-
+<app-tab-group>
+  <app-tab tabTitle="Tab 1" [active]="true">
+    Content of Tab 1
+  </app-tab>
+  <app-tab tabTitle="Tab 2">
+    Content of Tab 2
+  </app-tab>
+  <app-tab tabTitle="Tab 3">
+    Content of Tab 3
+  </app-tab>
+</app-tab-group>

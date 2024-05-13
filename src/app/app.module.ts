@@ -7,16 +7,16 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import {FormsModule} from "@angular/forms";
 import { InputFieldComponent } from './input-field/input-field.component';
 import {NgOptimizedImage} from "@angular/common";
-import {OptionSwitchComponent} from './option-switch/option-switch.component';
 import { HttpClientModule } from '@angular/common/http';
-import { TranslocoRootModule } from './transloco-root.module'
-import {TranslocoModule} from "@ngneat/transloco";
+import { TabGroupComponent } from './tab-group/tab.group.component';
+import { TabComponent } from './tab/tab.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
     InputFieldComponent,
-    OptionSwitchComponent
+    TabGroupComponent,
+    TabComponent,
   ],
     imports: [
         BrowserModule,
@@ -24,7 +24,6 @@ import {TranslocoModule} from "@ngneat/transloco";
         FormsModule,
         NgOptimizedImage,
         HttpClientModule,
-        TranslocoModule
     ],
   providers: [
     provideClientHydration(),
