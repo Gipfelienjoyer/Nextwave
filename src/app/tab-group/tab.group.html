@@ -1,6 +1,6 @@
 <ul class="tabGroupUl">
   <li *ngFor="let tab of tabs" (click)="selectTab(tab)" [class.active]="tab.active">
-    <a href="#" [class.active]="tab.active" (click)="tabClicked(tab)">{{ tab.title }}</a>
+    <p [class.active]="tab.active" (click)="tabClicked(tab)">{{ tab.title }}</p>
   </li>
 </ul>
 <div class="tab-content">
