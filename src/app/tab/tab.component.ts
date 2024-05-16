@@ -1,19 +1,15 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tab',
   template: `
-    <div [hidden]="!active" class="pane">
+    <div #tabContent *ngIf="active">
       <ng-content></ng-content>
     </div>
   `,
+  styles: []
 })
 export class TabComponent {
-  @Input('tabTitle') title: string = "";
-  @Input() active = false;
-  @Output() tabClicked = new EventEmitter<void>();
-
-  onClick() {
-    this.tabClicked.emit();
-  }
+  @Input() label!: string;
+  active = false;
 }

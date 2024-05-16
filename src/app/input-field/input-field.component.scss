@@ -7,14 +7,14 @@
   &:hover {
     border-radius: 15px;
     height: 62px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
 
     label{
       font-size: 18px;
     }
 
     .inputFieldButtonShadowDiv{
-      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
     }
 
     .inputFieldButton{
@@ -35,7 +35,7 @@
         .inputFieldButtonShadowDiv{
           height: 37px;
           width: 18.5px;
-          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
 
         }
       }

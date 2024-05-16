@@ -1,8 +1,21 @@
-<ul class="tabGroupUl">
-  <li *ngFor="let tab of tabs" (click)="selectTab(tab)" [class.active]="tab.active">
-    <p [class.active]="tab.active" (click)="tabClicked(tab)">{{ tab.title }}</p>
-  </li>
-</ul>
-<div class="tab-content">
-  <ng-content></ng-content>
+<div class="tabGroupHeader">
+  <div class="tabGroupTitleHeader">
+    <div
+      #tabDiv
+      *ngFor="let tab of tabs; let i = index"
+      class="tabGroupTitles"
+      (click)="selectTab(i)"
+      (mouseenter)="mouseEnter(i)"
+      (mouseleave)="barHover = false">
+      <p
+        [style.font-weight]="i === selected? '600' : '400'"
+      >{{ tab.label }}</p>
+    </div>
+  </div>
+  <div class="tabGroupBarDiv">
+    <div class="tabGroupBar"
+      [style.height.%]="barHover? '100' : '75'"></div>
+  </div>
 </div>
+
+
