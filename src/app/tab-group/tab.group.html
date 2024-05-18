@@ -4,17 +4,12 @@
       #tabDiv
       *ngFor="let tab of tabs; let i = index"
       class="tabGroupTitles"
-      (click)="selectTab(i)"
-      (mouseenter)="mouseEnter(i)"
-      (mouseleave)="barHover = false">
-      <p
-        [style.font-weight]="i === selected? '600' : '400'"
-      >{{ tab.label }}</p>
+      (click)="selectTab(i) ">
+      <p>{{ tab.label }}</p>
     </div>
   </div>
   <div class="tabGroupBarDiv">
-    <div class="tabGroupBar"
-      [style.height.%]="barHover? '100' : '75'"></div>
+    <div class="tabGroupBar" ></div>
   </div>
 </div>
 
