@@ -47,7 +47,7 @@
   background: var(--Text);
   width: 10px;
   border-radius: 1000px;
-  transition: 0.4s ease;
+  transition: none;
 }
 
 .tabGroupTitleHeader{
@@ -64,5 +64,6 @@ p{
 }
 
 .active{
-  font-weight: 450;
+  font-weight: 500;
 }
+
