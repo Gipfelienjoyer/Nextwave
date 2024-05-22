@@ -4,13 +4,13 @@
       #tabDiv
       *ngFor="let tab of tabs; let i = index"
       class="tabGroupTitles"
-      (click)="selectTab(i) ">
+      (click)="selectTab(i, $event)"
+      [class.active]="i === selected">
       <p>{{ tab.label }}</p>
     </div>
   </div>
   <div class="tabGroupBarDiv">
-    <div class="tabGroupBar" ></div>
+    <div #tabGroupBar class="tabGroupBar"></div>
   </div>
 </div>
-
-
+<ng-content></ng-content>
