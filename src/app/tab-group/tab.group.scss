@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin: 5px 10px 0 0;
+  margin: 5px 15px 0 0;
   padding: 0;
 
 
@@ -20,7 +20,7 @@
     font-size: 19px;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
 
-    p{
+    p {
       font-weight: 450;
     }
   }
@@ -40,11 +40,10 @@
   bottom: 5px;
 }
 
-.tabGroupBar{
+.tabGroupBar {
   position: relative;
   left: 0;
-  height: 80%;
-  background: var(--Text);
+  height: 70%;
   width: 10px;
   border-radius: 1000px;
   transition: none;
@@ -67,3 +66,7 @@ p{
   font-weight: 500;
 }
 
+.barActive{
+  height: 90%;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}

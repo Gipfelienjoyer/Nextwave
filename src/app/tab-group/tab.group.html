@@ -5,13 +5,18 @@
       *ngFor="let tab of tabs; let i = index"
       class="tabGroupTitles"
       (click)="selectTab(i)"
-      [class.active]="i === selected">
-      <p>{{ tab.label }}</p>
+      [class.active]="i === selected"
+      (mouseleave)="barHover = false"
+      (mouseenter)="mouseHover(i)">
+      <p [style.color]="color">{{ tab.label }}</p>
     </div>
   </div>
   <div class="tabGroupBarDiv">
-    <div #tabGroupBar class="tabGroupBar"></div>
+    <div #tabGroupBar class="tabGroupBar"
+          [class.barActive]="barHover"
+          [style.background-color]="color"></div>
   </div>
 </div>
   <ng-content></ng-content>
+
 

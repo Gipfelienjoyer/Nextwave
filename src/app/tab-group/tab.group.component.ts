@@ -1,4 +1,17 @@
-import { Component, ContentChildren, AfterContentInit, AfterViewInit, QueryList, ElementRef, ViewChildren, ViewChild, Renderer2, Input, ChangeDetectorRef } from '@angular/core';
+import {
+  Component,
+  ContentChildren,
+  AfterContentInit,
+  AfterViewInit,
+  QueryList,
+  ElementRef,
+  ViewChildren,
+  ViewChild,
+  Renderer2,
+  Input,
+  ChangeDetectorRef,
+  Output, EventEmitter
+} from '@angular/core';
 import { TabComponent } from './tab.component';
 
 @Component({
@@ -10,8 +23,11 @@ export class TabGroupComponent implements AfterContentInit, AfterViewInit {
   @ContentChildren(TabComponent) tabs!: QueryList<TabComponent>;
   @ViewChildren('tabDiv') tabDivs!: QueryList<ElementRef>;
   @ViewChild('tabGroupBar') tabGroupBar!: ElementRef;
-  @Input() default: number = 1;
+  @Input() default: number = 0;
+  @Output() index: EventEmitter<number> = new EventEmitter<number>();
   selected = 0;
+  barHover = false;
+  @Input() color = "var(--Text)"
 
   constructor(private renderer: Renderer2, private cdr: ChangeDetectorRef) {}
 
@@ -27,6 +43,7 @@ export class TabGroupComponent implements AfterContentInit, AfterViewInit {
     setTimeout(() => {
       this.setTransition('400ms ease')
     }, 0);
+    this.barHover = false;
   }
 
   private setTransition (transitionValue: string) {
@@ -48,6 +65,8 @@ export class TabGroupComponent implements AfterContentInit, AfterViewInit {
       this.renderer.setStyle(barDiv, 'width', `${tabDivRect.width}px`);
       this.renderer.setStyle(barDiv, 'transform', `translateX(${tabDiv.offsetLeft}px)`);
     }
+    this.index.emit(this.selected)
+    this.barHover = true
   }
 
   updateBarPosition() {
@@ -57,6 +76,12 @@ export class TabGroupComponent implements AfterContentInit, AfterViewInit {
       const tabDivRect = tabDiv.getBoundingClientRect();
       this.renderer.setStyle(barDiv, 'width', `${tabDivRect.width}px`);
       this.renderer.setStyle(barDiv, 'transform', `translateX(${tabDiv.offsetLeft}px)`);
+    }
+  }
+
+  mouseHover(index : number) {
+    if (index === this.selected){
+      this.barHover = true;
     }
   }
 }

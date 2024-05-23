@@ -15,10 +15,47 @@
 
 .loginPageLoginDiv{
   padding: 50px;
-  background: var(--DivBackground)
+  background: var(--DivBackground);
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.loginPageTitleDiv{
+  display: inline-flex;
+  justify-content: center;
+}
+
+.loginPageTitle{
+  color: var(--MainDefault);
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 50px;
 }
 
 .loginPageDataHalf{
   width: 50%;
-
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.loginPageLoginSubmit{
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.loginPageLoginSubmitInput{
+  max-width: 400px;
+  margin-top: 25px;
+}
+
+
+
+
+

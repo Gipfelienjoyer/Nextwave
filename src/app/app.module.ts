@@ -10,6 +10,8 @@ import {NgOptimizedImage} from "@angular/common";
 import { HttpClientModule } from '@angular/common/http';
 import { TabGroupComponent } from './tab-group/tab.group.component';
 import { TabComponent } from './tab-group/tab.component';
+import {TabsModule} from "ngx-bootstrap/tabs";
+import { CheckboxComponent } from './checkbox/checkbox.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,14 +19,16 @@ import { TabComponent } from './tab-group/tab.component';
     InputFieldComponent,
     TabGroupComponent,
     TabComponent,
+    CheckboxComponent,
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule,
-        NgOptimizedImage,
-        HttpClientModule,
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    NgOptimizedImage,
+    HttpClientModule,
+    TabsModule,
+  ],
   providers: [
     provideClientHydration(),
   ],

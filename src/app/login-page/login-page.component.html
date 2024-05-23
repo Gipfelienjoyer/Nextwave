@@ -1,7 +1,29 @@
 <div class="loginPageMainDiv">
-  <div class="loginPageDataHalf"></div>
-
+  <div class="loginPageDataHalf">
+    <checkbox></checkbox>
+  </div>
   <div class="loginPageLoginHalf">
-    <div class="loginPageLoginDiv"></div>
+    <div class="loginPageLoginDiv">
+      <div class="loginPageTitleDiv"><p class="loginPageTitle">Some basic title</p></div>
+
+      <div class="loginPageTabs">
+          <tab-group color="var(--MainDefault)" style="width: 100%">
+            <app-tab label="Sign in">
+              <div class="loginPageLoginSubmit">
+                  <inputField class="loginPageLoginSubmitInput">Email</inputField>
+                  <inputField class="loginPageLoginSubmitInput" [password]="true">Password</inputField>
+              </div>
+              <input type="checkbox">
+            </app-tab>
+            <app-tab label="Sign up">
+              <div>
+
+              </div>
+            </app-tab>
+          </tab-group>
+      </div>
+    </div>
   </div>
 </div>
+
+

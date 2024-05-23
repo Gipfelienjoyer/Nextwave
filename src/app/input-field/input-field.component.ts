@@ -2,7 +2,7 @@ import {booleanAttribute, Component, EventEmitter, Input, OnInit, Output} from '
 import {url} from "node:inspector";
 
 @Component({
-  selector: 'app-input-field',
+  selector: 'inputField',
   templateUrl: './input-field.component.html',
   styleUrl: './input-field.component.scss'
 })
@@ -13,7 +13,6 @@ export class InputFieldComponent implements OnInit{
   pwVisible: boolean = false;
   valid: boolean = false;
   ngOnInit() {
-    console.log(this.password)
     if (!this.password){
       this.pwVisible = true;
       console.log(this.pwVisible)
