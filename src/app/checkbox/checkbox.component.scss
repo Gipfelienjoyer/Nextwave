@@ -1,3 +1,42 @@
-.checkboxMainDiv{
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 27px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-mark {
+  width: 25px;
+  height: 25px;
+  border: 2.5px solid var(--MainDefault);
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 8px;
+  transition: ease 200ms;
+
+  &:hover{
+    height: 26px;
+    width: 26px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+
+.checkbox-mark.checked {
+}
+
+label {
+  user-select: none;
+}
+
+.checkboxSVg{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }

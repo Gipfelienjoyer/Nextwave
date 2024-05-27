@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'checkbox',
@@ -6,5 +6,22 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrl: './checkbox.component.scss'
 })
 export class CheckboxComponent {
-  @Input() description = "";
+  @Input() checked = false;
+  @Input() label: string = '';
+  @Input() disabled = false;
+  strokeWidth = 400;
+  @Output() checkedChange = new EventEmitter<boolean>();
+
+  toggleChecked() {
+    if (!this.disabled) {
+      this.checked = !this.checked;
+      this.checkedChange.emit(this.checked);
+    }
+  }
+
+  onCheckboxChange(event: Event) {
+    const input = event.target as HTMLInputElement;
+    this.checked = input.checked;
+    this.checkedChange.emit(this.checked);
+  }
 }

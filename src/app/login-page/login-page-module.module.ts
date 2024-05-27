@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { TranslocoModule, TRANSLOCO_SCOPE } from '@ngneat/transloco';
-import { LoginPageComponent } from './login-page.component'; // Import your component
+import { LoginPageComponent } from './login-page.component';
 
 const routes: Routes = [
   {
@@ -13,11 +12,10 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [LoginPageComponent],
-  providers: [{ provide: TRANSLOCO_SCOPE, useValue: 'loginPage' }],
+  providers: [],
   imports: [
     CommonModule,
     RouterModule.forChild(routes), // Import RouterModule.forChild and pass your routes
-    TranslocoModule
   ]
 })
 export class LoginPageModuleModule {}
