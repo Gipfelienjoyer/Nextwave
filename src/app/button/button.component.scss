@@ -1,0 +1,16 @@
+.buttonMainDiv{
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonButton{
+  height: 40px;
+  background-color: var(--MainDefault);
+  padding: 0 20px;
+  border-radius: 15px;
+  color: var(--DivBackground);
+  border: none;
+  transition: ease 200ms;
+}

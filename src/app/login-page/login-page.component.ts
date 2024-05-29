@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ButtonComponent } from '../button/button.component'
 
 @Component({
   selector: 'app-login-page',
@@ -7,4 +8,10 @@ import { Component, Input } from '@angular/core';
 })
 export class LoginPageComponent {
   logIn: boolean = true;
+
+
+
+  indexHandler(number: number){
+    this.logIn = number >= 1;
+  }
 }

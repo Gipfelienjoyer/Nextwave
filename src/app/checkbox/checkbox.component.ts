@@ -16,6 +16,7 @@ export class CheckboxComponent {
     if (!this.disabled) {
       this.checked = !this.checked;
       this.checkedChange.emit(this.checked);
+      console.log(this.checked)
     }
   }
 
