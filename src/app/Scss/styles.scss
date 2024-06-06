@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 html,
-body{
+body {
   height: 100%;
   width: 100%;
   background-color: var(--Background);
@@ -11,16 +11,16 @@ body{
   justify-content: center;
 }
 
-div{
+div {
   display: inline-flex;
 }
 
-app-login-page{
+app-login-page {
   display: flex;
   height: 100%;
 }
 
-p{
+p {
   font-size: 18px;
   color: var(--Text);
   margin: 0;
@@ -28,16 +28,21 @@ p{
   white-space: nowrap;
 }
 
-tab-Group{
+tab-Group {
   display: flex;
   flex-direction: column;
 }
 
-app-tab{
+app-tab {
   display: flex;
 }
 
-app-root{
+app-root {
   width: 100%;
   height: 100%;
+}
+
+Header {
+  width: 100%;
+  height: 100px;
 }

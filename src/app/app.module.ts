@@ -7,7 +7,7 @@ import { LoginPageComponent} from "./login-page/login-page.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { InputFieldComponent } from './input-field/input-field.component';
 import { NgOptimizedImage } from "@angular/common";
-import { HttpClientModule } from '@angular/common/http';
+import {HttpClientModule, provideHttpClient, withFetch} from '@angular/common/http';
 import { TabGroupComponent } from './tab-group/tab.group.component';
 import { TabComponent } from './tab-group/tab.component';
 import {TabsModule} from "ngx-bootstrap/tabs";
@@ -16,6 +16,7 @@ import { ButtonComponent } from './button/button.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import {TooltipModule} from "ngx-bootstrap/tooltip";
 
 @NgModule({
   declarations: [
@@ -38,9 +39,13 @@ import { HeaderComponent } from './header/header.component';
     HttpClientModule,
     TabsModule,
     ReactiveFormsModule,
+    TooltipModule,
   ],
   providers: [
     provideClientHydration(),
+    provideHttpClient(
+      withFetch()
+    )
   ],
   bootstrap: [AppComponent]
 })
