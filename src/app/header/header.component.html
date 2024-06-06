@@ -1,0 +1,7 @@
+<div class="footerMainDiv">
+  <div class="logo" [ngStyle]="{'background-image': 'url(src/assets/images/logo.png)'}"></div>
+  <div *ngFor="let link of getLinks()" class="footerLinkDiv">
+    <p (click)="navigateTo(link.path)">{{ link.name }}</p>
+  </div>
+</div>
+/

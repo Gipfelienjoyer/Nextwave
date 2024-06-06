@@ -14,6 +14,9 @@ import {TabsModule} from "ngx-bootstrap/tabs";
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { ButtonComponent } from './button/button.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +27,8 @@ import { HomePageComponent } from './home-page/home-page.component';
     CheckboxComponent,
     ButtonComponent,
     HomePageComponent,
+    FooterComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
