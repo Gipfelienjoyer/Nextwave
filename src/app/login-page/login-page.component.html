@@ -5,27 +5,27 @@
     <div class="loginPageLoginDiv">
       <div class="loginPageTitleDiv"><p class="loginPageTitle">{{ logIn ? 'Sign up' : 'Sign in' }}</p></div>
 
-      <div class="loginPageTabs" >
-          <tab-group color="var(--MainDefault)" style="width: 100%" (index)="indexHandler($event)">
-            <app-tab label="Sign in">
-              <div class="loginPageLoginSubmit">
-                  <inputField class="loginPageLoginSubmitInput">Email</inputField>
-                  <inputField class="loginPageLoginSubmitInput" [password]="true">Password</inputField>
-                  <checkbox label="Remember me" class="loginPageLoginSubmitCheckbox">Test</checkbox>
-                  <div class="loginPageLoginSubmitButtonDiv">
-                    <buttonC>Sign in</buttonC>
-                  </div>
-              </div>
+      <div class="loginPageTabs">
+        <tab-group color="var(--MainDefault)" style="width: 100%" (index)="indexHandler($event)">
+          <app-tab label="Sign in">
+            <div class="loginPageLoginSubmit">
+              <form class="loginPageLoginSubmitInputForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <inputField id="logInEmail" formGroupName="logInEmailInput" class="loginPageLoginSubmitInput">Email</inputField>
+                <inputField id="logInPassword" formControlName="logInPassword" class="loginPageLoginSubmitInput" [password]="true">Password</inputField>
+                <checkbox id="logInCheckbox" formControlName="logInCheckbox" label="Remember me" class="loginPageLoginSubmitCheckbox"></checkbox>
+                <buttonC type="submit">Log In</buttonC>
+              </form>
+            </div>
+          </app-tab>
+          <app-tab label="Sign up">
+            <div>
+              <div class="loginPageLoginSignUpSubmit">
 
-            </app-tab>
-            <app-tab label="Sign up">
-              <div>
-                <checkbox></checkbox>
               </div>
-            </app-tab>
-          </tab-group>
+            </div>
+          </app-tab>
+        </tab-group>
       </div>
     </div>
   </div>
 </div>
-

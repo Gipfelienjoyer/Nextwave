@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Input, output, Output} from '@angular/core';
 
 @Component({
   selector: 'buttonC',
@@ -8,10 +8,15 @@ import { Component } from '@angular/core';
 export class ButtonComponent {
   scale: string = 'scale(1)';
   clicked: boolean = false;
+  hover = false;
+  @Input() disabled = false;
+  @Input() type = "button";
+  @Output() output = new EventEmitter<void>();
 
   enter() {
-    if (!this.clicked) {
+    if (!this.clicked && !this.disabled) {
       this.scale = 'scale(1.05)';
+      this.hover = true;
     }
   }
 
@@ -23,11 +28,17 @@ export class ButtonComponent {
       this.scale = 'scale(1)';
       this.clicked = false;
     }, 200);
+
+    if (!this.disabled) {
+      this.output.emit();
+    }
   }
 
   leave() {
     if (!this.clicked) {
       this.scale = 'scale(1)';
+
     }
+    this.hover = false;
   }
 }

@@ -8,6 +8,7 @@ import {url} from "node:inspector";
 })
 export class InputFieldComponent implements OnInit{
   @Input({transform: booleanAttribute}) password: boolean = false;
+
   @Output() inputValue: EventEmitter<string> = new EventEmitter<string>();
   value: string = "";
   pwVisible: boolean = false;

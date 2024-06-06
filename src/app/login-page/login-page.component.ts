@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ButtonComponent } from '../button/button.component'
+import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-login-page',
@@ -9,9 +10,18 @@ import { ButtonComponent } from '../button/button.component'
 export class LoginPageComponent {
   logIn: boolean = true;
 
+  loginForm = new FormGroup({
+    logInEmailInput: new FormControl(''),
+    logInPassword: new FormControl(''),
+    logInCheckbox: new FormControl('')
+  })
 
 
   indexHandler(number: number){
     this.logIn = number >= 1;
+  }
+
+  onSubmit(){
+    console.warn(this.loginForm.value)
   }
 }

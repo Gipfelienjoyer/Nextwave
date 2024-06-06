@@ -66,3 +66,13 @@
   margin-top: 25px;
 }
 
+.loginPageLoginSignUpSubmit{
+  display: inline-flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.loginPageLoginSubmitInputForm{
+  display: flex;
+  flex-direction: column;
+}
