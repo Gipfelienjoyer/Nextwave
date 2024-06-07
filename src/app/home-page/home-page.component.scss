@@ -22,6 +22,8 @@
 .homePageRecentActivities{
   width: 100%;
   display: flex;
+  justify-content: flex-start;
+  gap: 25px;
 }
 
 .homePageNextAppointments{

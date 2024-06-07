@@ -1,0 +1,77 @@
+.dataDisplayMainMainDiv {
+  flex-grow: 2;
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;}
+
+.dataDisplayMainDiv {
+  width: 100%;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 2px solid var(--MainDefault);
+  padding: 5px 15px;
+  justify-content: space-between;
+}
+
+.dataDisplayDateAndTime {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dataDisplayDateAndTimeData {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+.dataDisplayDateAndTimeLine {
+  width: 100%;
+  border-radius: 30px;
+  background-color: var(--MainDefault);
+  height: 2px;
+}
+
+.dataDisplayVerticalLine {
+  width: 2px;
+  border-radius: 30px;
+  height: 50px;
+  background: var(--MainDefault);
+}
+
+.dataDisplayLeftSide {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  height: 100%;
+}
+
+.rotated {
+  transform: rotate(180deg);
+  transition: ease 300ms;
+}
+
+.noBorders {
+  border-radius: 15px 15px 0 0;
+  border-bottom: none;
+  width: 100%;
+}
+
+.dataDisplayDescription {
+  padding: 5px 15px;
+  border-radius: 0 0 15px 15px;
+  border-top: none;
+  border-bottom: 2px solid var(--MainDefault);
+  border-left: 2px solid var(--MainDefault);
+  border-right: 2px solid var(--MainDefault);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre-line;
+  word-wrap: break-word;
+  word-break: break-word;
+}

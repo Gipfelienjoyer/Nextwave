@@ -1,12 +1,15 @@
 <div class="homePageMainDiv">
   <Header [links]="links"></Header>
-  <h1 class="homePageTitle">Welcome back {{ items.username }}</h1>
+  <h1 class="homePageTitle">Welcome back</h1>
   <div class="homePageRecentActivities">
     <div class="homePageNextAppointments">
       <p class="homePageTitleSmaller">Your next 5 appointments</p>
       <div>
-          <DataDisplay [data]="selectedData"></DataDisplay>
+        <DataDisplay [appointment]="selectedData"></DataDisplay>
       </div>
+    </div>
+    <div class="homePageToDo" style="width: 100%; display: flex; flex-grow: 2">
+      <p class="homePageTitleSmaller">Your ToDo List</p>
     </div>
   </div>
 </div>

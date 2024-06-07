@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginPageComponent} from "./login-page/login-page.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { InputFieldComponent } from './input-field/input-field.component';
-import { NgOptimizedImage } from "@angular/common";
+import {CommonModule, DatePipe, NgOptimizedImage} from "@angular/common";
 import {HttpClientModule, provideHttpClient, withFetch} from '@angular/common/http';
 import { TabGroupComponent } from './tab-group/tab.group.component';
 import { TabComponent } from './tab-group/tab.component';
@@ -18,6 +18,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import {TooltipModule} from "ngx-bootstrap/tooltip";
 import { DataDisplayComponent } from './data-display/data-display.component';
+import {DataService} from "./data.service";
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import {MatGridList, MatGridTile} from "@angular/material/grid-list";
 
 @NgModule({
   declarations: [
@@ -42,12 +45,18 @@ import { DataDisplayComponent } from './data-display/data-display.component';
     TabsModule,
     ReactiveFormsModule,
     TooltipModule,
+    CommonModule,
+    MatGridList,
+    MatGridTile
   ],
   providers: [
     provideClientHydration(),
     provideHttpClient(
       withFetch()
-    )
+    ),
+    DataService,
+    DatePipe,
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

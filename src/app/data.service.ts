@@ -2,16 +2,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {Appointment} from "./models/appointment.model";
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  private dataUrl = 'assets/testdata.json'; //Later an API
+  private apiUrl = 'assets/testdata.json';
 
   constructor(private http: HttpClient) { }
 
-  getData(): Observable<any> {
-    return this.http.get<any>(this.dataUrl);
+  getData(): Observable<{ appointments: Appointment[] }> {
+    return this.http.get<{ appointments: Appointment[] }>(this.apiUrl);
   }
 }
