@@ -3,10 +3,12 @@
   height: 100px;
   background: var(--DivBackground);
   border-radius: 15px;
-  display: flex;
+  display: inline-flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   padding: 0 15px;
+
 }
 
 .footerLinkDiv{

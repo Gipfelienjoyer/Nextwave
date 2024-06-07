@@ -1,7 +1,4 @@
 <div class="footerMainDiv">
-  <div class="footerLogoDiv">
-    <div class="footerLogo" tooltip="Home" [delay]="500"></div>
-  </div>
   <div *ngFor="let link of getLinks()" class="footerLinkDiv">
     <p (click)="navigateTo(link.path)">{{ link.name }}</p>
   </div>

@@ -1,8 +1,13 @@
 <div class="homePageMainDiv">
   <Header [links]="links"></Header>
-  <h1 class="homePageTitle">Welcome back {{items.username}}</h1>
-  <div>  </div>
-  <div>
-
+  <h1 class="homePageTitle">Welcome back {{ items.username }}</h1>
+  <div class="homePageRecentActivities">
+    <div class="homePageNextAppointments">
+      <p class="homePageTitleSmaller">Your next 5 appointments</p>
+      <div>
+          <DataDisplay [data]="selectedData"></DataDisplay>
+      </div>
+    </div>
   </div>
 </div>
+

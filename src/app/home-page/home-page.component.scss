@@ -4,6 +4,11 @@
   padding: 50px 50px 0 50px;
   display: flex;
   gap: 50px;
+  flex-direction: column;
+
+  h1{
+    text-wrap: wrap;
+  }
 }
 
 .homePageTitle{
@@ -12,4 +17,26 @@
   font-weight: 600;
   line-height: normal;
   color: var(--MainDefault);
+}
+
+.homePageRecentActivities{
+  width: 100%;
+  display: flex;
+}
+
+.homePageNextAppointments{
+  display: inline-flex;
+  background-color: var(--DivBackground);
+  border-radius: 15px;
+  padding: 50px;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.homePageTitleSmaller{
+  color: var(--MainDefault);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }

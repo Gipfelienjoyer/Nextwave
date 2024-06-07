@@ -1,3 +1,35 @@
 {
-  "username": "Testuser"
+  "username": "Testuser",
+  "appointments": [
+    {
+      "date": "2024-06-10",
+      "time": "14:00",
+      "title": "Dentist Appointment",
+      "desc": "Routine dental check-up and cleaning."
+    },
+    {
+      "date": "2024-06-12",
+      "time": "09:00",
+      "title": "Team Meeting",
+      "desc": "Monthly team meeting to discuss project progress and next steps."
+    },
+    {
+      "date": "2024-06-15",
+      "time": "11:30",
+      "title": "Brunch with Sarah",
+      "desc": "Catch up with Sarah at the new cafe downtown."
+    },
+    {
+      "date": "2024-06-20",
+      "time": "16:00",
+      "title": "Yoga Class",
+      "desc": "Weekly yoga class at the community center."
+    },
+    {
+      "date": "2024-06-25",
+      "time": "10:00",
+      "title": "Doctor Appointment",
+      "desc": "Annual physical examination."
+    }
+  ]
 }

@@ -17,6 +17,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import {TooltipModule} from "ngx-bootstrap/tooltip";
+import { DataDisplayComponent } from './data-display/data-display.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import {TooltipModule} from "ngx-bootstrap/tooltip";
     HomePageComponent,
     FooterComponent,
     HeaderComponent,
+    DataDisplayComponent,
   ],
   imports: [
     BrowserModule,

@@ -14,19 +14,16 @@ export class HomePageComponent implements OnInit {
     "Log in": "/login"
   }
   items: any = {};
-
+  selectedData: any;
   constructor(private dataService: DataService) {
   }
+
   ngOnInit(): void {
     this.dataService.getData().subscribe(
       data => {
-        console.log('Full response:', data);
           this.items = data;
-          console.log('Items:', this.items);
       },
-      error => {
-        console.error('Error fetching data:', error);
-      }
     );
+    this.selectedData = this.items.appointments[1]
   }
 }
