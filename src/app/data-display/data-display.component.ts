@@ -1,5 +1,6 @@
 import { Component, Input, OnChanges, Renderer2, SimpleChanges, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { DatePipe } from "@angular/common";
+import {After} from "node:v8";
 
 @Component({
   selector: 'DataDisplay',
@@ -8,11 +9,14 @@ import { DatePipe } from "@angular/common";
 })
 export class DataDisplayComponent implements OnChanges, AfterViewInit {
   @Input() appointment: { date: string, time: string, title: string, desc: string } = { date: "", time: "", title: "", desc: "" };
-  @ViewChild('SourceDiv') sourceDiv!: ElementRef;
-  @ViewChild('TargetDiv') targetDiv!: ElementRef;
+  @Input() todo: { title: string, priority: string, status: string, description: string} = {title: "", priority: "", status: "", description: ""}
   rotated = false;
   formattedDate: string | null = "";
-
+  maxWidth = 100;
+  Title = "";
+  Time = "";
+  Description = "";
+  @ViewChild('SourceDiv') sourceDiv!: ElementRef;
   constructor(private datePipe: DatePipe, private renderer: Renderer2) {}
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -23,7 +27,21 @@ export class DataDisplayComponent implements OnChanges, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.setWidth();
+    this.maxWidth = this.sourceDiv.nativeElement.offsetWidth;
+    if (this.appointment){
+      this.Title = this.appointment.title;
+      this.Description = this.appointment.desc;
+    }
+
+    else if (this.todo) {
+      this.Title = this.todo.title;
+      this.Description = this.todo.description;
+      console.log(this.todo)
+    }
+
+    else{
+      this.Title = "Error"
+    }
   }
 
   formatDate(): void {
@@ -31,16 +49,10 @@ export class DataDisplayComponent implements OnChanges, AfterViewInit {
     this.formattedDate = this.datePipe.transform(dateObject, 'dd.MM');
   }
 
-  setWidth(): void {
-      const sourceDivWidth = this.sourceDiv.nativeElement.offsetWidth;
-      this.renderer.setStyle(this.targetDiv.nativeElement, 'max-width', `${sourceDivWidth}px`);
-      console.log(sourceDivWidth);
-  }
 
   toggleRotated(): void {
     this.rotated = !this.rotated;
     if (this.rotated) {
-      this.setWidth();
     }
   }
 }

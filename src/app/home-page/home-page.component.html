@@ -4,13 +4,16 @@
   <div class="homePageRecentActivities">
     <div class="homePageNextAppointments">
       <p class="homePageTitleSmaller">Your next 5 appointments</p>
-      <div>
-        <DataDisplay [appointment]="selectedData"></DataDisplay>
+      <div class="homePageRecentActivitiesActivity">
+        <DataDisplay *ngFor="let index of [0,1,2,3,4]" [appointment]="appointmentItems[index]"></DataDisplay>
       </div>
     </div>
-    <div class="homePageToDo" style="width: 100%; display: flex; flex-grow: 2">
+    <div class="homePageNextAppointments" style="width: 100%; display: flex; flex-grow: 2">
       <p class="homePageTitleSmaller">Your ToDo List</p>
+      <div class="homePageRecentActivitiesActivity">
+        <DataDisplay *ngFor="let index of [0,1,2,3,4]" [todo]="toDoItems[index]"/>
+      </div>
     </div>
   </div>
 </div>
-
+{{toDoItems}}

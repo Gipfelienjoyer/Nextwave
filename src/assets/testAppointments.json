@@ -8,10 +8,10 @@
       "desc": "Routine dental check-up and cleaning.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Id diam maecenas ultricies mi eget mauris. Pulvinar pellentesque habitant morbi tristique. Turpis nunc eget lorem dolor sed viverra ipsum. Leo duis ut diam quam nulla porttitor massa id neque."
     },
     {
-      "date": "2024-06-12",
-      "time": "09:00",
       "title": "Team Meeting",
-      "desc": "Monthly team meeting to discuss project progress and next steps."
+      "desc": "Monthly team meeting to discuss project progress and next steps.",
+      "date": "2024-06-12",
+      "time": "09:00"
     },
     {
       "date": "2024-06-15",

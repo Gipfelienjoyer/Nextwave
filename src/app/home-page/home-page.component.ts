@@ -3,6 +3,7 @@ import {DataService} from "../data.service";
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Appointment} from "../models/appointment.model";
+import {ToDo} from "../models/appointment.model"
 
 @Component({
   selector: 'app-home-page',
@@ -14,26 +15,31 @@ export class HomePageComponent implements OnInit {
     "Home": "/home",
     "Log in": "/login"
   }
-  items: Appointment[] = [];
-  selectedData: Appointment = {
-    date: '',
-    time: '',
-    title: '',
-    desc: ''
-  };
+  appointmentItems: Appointment[] = [];
+  toDoItems: ToDo[] = [];
+
 
   constructor(private dataService: DataService) {
   }
 
   ngOnInit(): void {
-    this.dataService.getData().subscribe(
+    this.dataService.getAppointmentData().subscribe(
       data => {
-        this.items = data.appointments;
-        this.selectedData = this.items[0]; // Select the first appointment
+        this.appointmentItems = data.appointments;
       },
       error => {
         console.error('Error fetching data', error);
       }
     );
+
+    this.dataService.getToDoData().subscribe(
+      data => {
+        this.toDoItems = data.ToDo;
+        console.log(this.toDoItems)
+      },
+      error => {
+        console.error('Error fetching data', error);
+      }
+    )
   }
 }

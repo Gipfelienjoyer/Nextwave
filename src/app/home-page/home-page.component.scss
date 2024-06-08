@@ -1,4 +1,4 @@
-.homePageMainDiv{
+.homePageMainDiv {
   height: 100%;
   width: 100%;
   padding: 50px 50px 0 50px;
@@ -6,12 +6,12 @@
   gap: 50px;
   flex-direction: column;
 
-  h1{
+  h1 {
     text-wrap: wrap;
   }
 }
 
-.homePageTitle{
+.homePageTitle {
   font-size: 64px;
   font-style: normal;
   font-weight: 600;
@@ -19,14 +19,15 @@
   color: var(--MainDefault);
 }
 
-.homePageRecentActivities{
+.homePageRecentActivities {
   width: 100%;
   display: flex;
   justify-content: flex-start;
   gap: 25px;
+  flex-direction: row;
 }
 
-.homePageNextAppointments{
+.homePageNextAppointments {
   display: inline-flex;
   background-color: var(--DivBackground);
   border-radius: 15px;
@@ -35,10 +36,41 @@
   gap: 25px;
 }
 
-.homePageTitleSmaller{
+.homePageTitleSmaller {
   color: var(--MainDefault);
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+
+.homePageRecentActivitiesActivity{
+  display: inline-flex;
+  flex-direction: column;
+  gap: 25px;
+  max-height: 450px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.homePageRecentActivitiesActivity::-webkit-scrollbar {
+  width: 7px;
+}
+
+.homePageRecentActivitiesActivity::-webkit-scrollbar-track {
+  background: lightgray;
+  border-radius: 15px;
+}
+
+.homePageRecentActivitiesActivity::-webkit-scrollbar-thumb {
+  background: var(--MainDefault);
+  border-radius: 15px;
+}
+
+.homePageRecentActivitiesActivity::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.homePageRecentActivitiesActivity::-webkit-scrollbar-button {
+  display: none;
 }
