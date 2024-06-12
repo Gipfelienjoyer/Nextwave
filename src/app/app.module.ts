@@ -21,6 +21,7 @@ import { DataDisplayComponent } from './data-display/data-display.component';
 import {DataService} from "./data.service";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {MatGridList, MatGridTile} from "@angular/material/grid-list";
+import {MatRadioButton} from "@angular/material/radio";
 
 @NgModule({
   declarations: [
@@ -36,19 +37,20 @@ import {MatGridList, MatGridTile} from "@angular/material/grid-list";
     HeaderComponent,
     DataDisplayComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    NgOptimizedImage,
-    HttpClientModule,
-    TabsModule,
-    ReactiveFormsModule,
-    TooltipModule,
-    CommonModule,
-    MatGridList,
-    MatGridTile
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        NgOptimizedImage,
+        HttpClientModule,
+        TabsModule,
+        ReactiveFormsModule,
+        TooltipModule,
+        CommonModule,
+        MatGridList,
+        MatGridTile,
+        MatRadioButton
+    ],
   providers: [
     provideClientHydration(),
     provideHttpClient(
