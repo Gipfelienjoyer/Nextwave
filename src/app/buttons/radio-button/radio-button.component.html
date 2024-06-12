@@ -1,0 +1,7 @@
+<div class="custom-radio" [class.selected]="selected" (click)="selectRadio()">
+  <input type="radio" [name]="name" [value]="value" [checked]="selected" (change)="onRadioChange($event)" />
+  <span class="radio-button">
+    <span class="circle" *ngIf="selected"></span>
+  </span>
+  <span class="radio-label"><ng-content></ng-content></span>
+</div>

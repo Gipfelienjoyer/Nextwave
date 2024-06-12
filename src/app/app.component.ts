@@ -16,6 +16,4 @@ export class AppComponent {
       this.isLightTheme ? 'light' : 'dark'
     );
   }
-  testArray: string[] = ['Test', 'ddd', 'dkjalsdjflj']
-
 }

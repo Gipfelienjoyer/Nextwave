@@ -10,6 +10,7 @@ import {
 } from '@angular/core';
 import {DatePipe} from "@angular/common";
 import {After} from "node:v8";
+import {DataService} from "../data.service";
 
 @Component({
   selector: 'DataDisplay',
@@ -38,10 +39,11 @@ export class DataDisplayComponent implements OnChanges, AfterViewInit {
   Description = "";
   @ViewChild('SourceDiv') sourceDiv!: ElementRef;
 
-  constructor(private datePipe: DatePipe, private renderer: Renderer2) {
+  constructor(private datePipe: DatePipe, private renderer: Renderer2, private dataService: DataService) {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+
     if (changes['appointment'] && changes['appointment'].currentValue) {
       this.formattedDate = this.appointment.date;
       this.formatDate();
@@ -49,6 +51,7 @@ export class DataDisplayComponent implements OnChanges, AfterViewInit {
       this.Title = this.appointment.title;
       this.Description = this.appointment.desc;
       this.appointments = true;
+      console.log(this.Description)
     }
 
     if (changes['todo'] && this.todo) {
@@ -56,6 +59,16 @@ export class DataDisplayComponent implements OnChanges, AfterViewInit {
       this.Description = this.todo.description;
       this.appointments = false;
     }
+  }
+
+  radioAPI() {
+    if (this.todo.status !== "Done") {
+      this.todo.status = "Done"
+    }
+    else {
+      this.todo.status = "NotDone"
+    }
+    this.dataService.updateAppointmentData(this.todo)
   }
 
   ngAfterViewInit() {
@@ -70,5 +83,6 @@ export class DataDisplayComponent implements OnChanges, AfterViewInit {
 
   toggleRotated(): void {
     this.rotated = !this.rotated;
+    this.maxWidth = this.sourceDiv.nativeElement.offsetWidth;
   }
 }

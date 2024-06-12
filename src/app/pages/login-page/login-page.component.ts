@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ButtonComponent } from '../button/button.component'
+import { ButtonComponent } from '../../buttons/button/button.component'
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({

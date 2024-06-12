@@ -46,10 +46,6 @@ export class TabGroupComponent implements AfterContentInit, AfterViewInit {
     this.barHover = false;
   }
 
-  private setTransition (transitionValue: string) {
-    this.renderer.setStyle(this.tabGroupBar.nativeElement, 'transition', transitionValue)
-  }
-
   selectTab(index: number) {
     this.selected = index;
 
@@ -83,5 +79,9 @@ export class TabGroupComponent implements AfterContentInit, AfterViewInit {
     if (index === this.selected){
       this.barHover = true;
     }
+  }
+
+  private setTransition (transitionValue: string) {
+    this.renderer.setStyle(this.tabGroupBar.nativeElement, 'transition', transitionValue)
   }
 }

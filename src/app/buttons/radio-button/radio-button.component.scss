@@ -1,0 +1,33 @@
+/* custom-radio.component.css */
+.custom-radio {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-radio input[type="radio"] {
+  display: none;
+}
+
+.custom-radio .radio-button {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--MainDefault);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.custom-radio .circle {
+  width: 8px;
+  height: 8px;
+  background-color: var(--MainDefault);
+  border-radius: 50%;
+}
+
+.custom-radio .radio-label {
+  cursor: pointer;
+}
