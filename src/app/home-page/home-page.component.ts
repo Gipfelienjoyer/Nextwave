@@ -35,7 +35,6 @@ export class HomePageComponent implements OnInit {
     this.dataService.getToDoData().subscribe(
       data => {
         this.toDoItems = data.ToDo;
-        console.log(this.toDoItems)
       },
       error => {
         console.error('Error fetching data', error);
