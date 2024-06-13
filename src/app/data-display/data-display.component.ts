@@ -51,7 +51,6 @@ export class DataDisplayComponent implements OnChanges, AfterViewInit {
       this.Title = this.appointment.title;
       this.Description = this.appointment.desc;
       this.appointments = true;
-      console.log(this.Description)
     }
 
     if (changes['todo'] && this.todo) {

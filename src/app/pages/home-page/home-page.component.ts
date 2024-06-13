@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Appointment} from "../../models/appointment.model";
 import {ToDo} from "../../models/appointment.model"
+import {error} from "@angular/compiler-cli/src/transformers/util";
 
 @Component({
   selector: 'app-home-page',
@@ -38,6 +39,15 @@ export class HomePageComponent implements OnInit {
       },
       error => {
         console.error('Error fetching data', error);
+      }
+    )
+
+    this.dataService.getHelloWorld().subscribe(
+      data => {
+        console.log(data)
+      },
+      error => {
+        console.log('Error', error)
       }
     )
   }

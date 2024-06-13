@@ -1,12 +1,19 @@
-import { Component, HostBinding } from '@angular/core';
+import {Component, HostBinding, OnInit} from '@angular/core';
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss' ]
 })
-export class AppComponent {
-  title = 'PersonalPortfolio';
+export class AppComponent implements OnInit{
+
+  constructor(private title: Title) {}
+
+  ngOnInit() {
+    this.title.setTitle("Nextwave")
+  }
+
   public isLightTheme = true;
   onThemeSwitchChange() {
     this.isLightTheme = !this.isLightTheme;

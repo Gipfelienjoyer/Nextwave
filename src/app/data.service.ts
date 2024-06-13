@@ -27,5 +27,9 @@ export class DataService {
     console.log('Mock post data:', data);
     return of({ success: true, message: 'Data logged successfully' });
   }
+
+  getHelloWorld(): Observable<string> {
+    return this.http.get('http://localhost:3000', { responseType: 'text' });
+  }
 }
 
